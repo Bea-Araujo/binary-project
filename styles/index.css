@@ -47,6 +47,32 @@ main {
     border-color: rgb(80, 80, 80) rgb(121, 121, 121) rgb(121, 121, 121) rgb(80, 80, 80);
     height: fit-content;
     width: fit-content;
+
+    position: relative;
+    overflow: hidden;
+}
+
+main::before {
+    content: '';
+    right: 110vw;
+    height: 368px;
+    width: 328px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.144), rgb(243, 243, 243));
+    position: absolute;
+    top: 0;
+    transform: skewX(40deg);
+    z-index: 1;
+    animation: shiny 4s ease-in-out;
+}
+
+@keyframes shiny {
+    0% {
+        right: 100vw;
+    }
+
+    100% {
+        right: -100vw;
+    }
 }
 
 .from-to-section {
