@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/index.css">
+
+    <title>Binary Code</title>
+</head>
+
+<body>
+    <header>
+        <h1>Binary Project</h1>
+    </header>
+    <main>
+        <section class="from-to-section">
+            <label for="from-selection">De: </label>
+            <select name="from-selection" id="from-field">
+                <option value="decimal">Decimal</option>
+                <option value="binario">Binário</option>
+                <option value="octal">Octal</option>
+            </select>
+
+            <label for="from-selection">Para: </label>
+            <select name="from-selection" id="to-field">
+                <option value="decimal">Decimal</option>
+                <option value="binario" selected>Binário</option>
+                <option value="octal">Octal</option>
+            </select>
+
+            <button id="submit-btn">Enviar</button>
+        </section>
+
+        <section class="input-output-section">
+            <label for="input-area">Código: </label>
+            <textarea name="input-area" id="input-area" class="input-area" cols="30" rows="10"></textarea>
+
+            <label for="output-area">Tradução: </label>
+            <textarea name="output-area" id="output-area" cols="30" rows="10"></textarea>
+        </section>
+    </main>
+    <footer></footer>
+
+    <script src="./js/view/input-view.js"></script>
+    <script src="./js/model/input-model.js"></script>
+    <script src="./js/controller/input-controller.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
