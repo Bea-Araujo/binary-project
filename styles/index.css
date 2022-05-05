@@ -2,6 +2,7 @@ body {
     background-image: url('../image/picture/o-THE-MATRIX-facebook.jpg.png');
     background-size: cover;
     overflow: hidden;
+    font-family: 'Inconsolata', monospace;
 }
 
 body::before {
@@ -11,11 +12,9 @@ body::before {
     content: '';
     height: 50px;
     width: 100%;
-    animation: scan 5s ease-in-out infinite;
+    animation: scan 10s cubic-bezier(0.5, 0.5, 0.5, 0.5) infinite;
     z-index: -1;
 }
-
-
 
 .cabecalho {
     background-color: black;
@@ -54,18 +53,51 @@ main {
     width: 80vw;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 20px 0;
     margin: 10px;
 }
 
 .from-to-section form {
-    width: 30vw;
+    width: 40vw;
     display: flex;
     justify-content: space-between;
 }
 
 label {
     margin: 0 10px 0 0;
+}
+
+select {
+    padding: 5px;
+    width: 13vw;
+}
+
+option {
+    border-radius: 0px;
+    height: 10em;
+}
+
+option:target {
+    background-color: #0a750a;
+}
+
+.from-to-section button {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 15vw;
+    transition: 1s;
+}
+
+button:hover {
+    background-color: black;
+    color: green
+}
+
+button:active {
+    background-color: black;
+    color: white;
 }
 
 .input-output-section {
@@ -87,6 +119,10 @@ textarea {
 .input-area {
     transition: 1s;
     resize: none;
+}
+
+.output-area {
+    color: #0a750a;
 }
 
 @keyframes blink {
@@ -112,7 +148,12 @@ textarea {
         bottom: 100vh;
     }
 
-    100% {
+    80% {
         bottom: 0;
+        height: 50px;
+    }
+
+    90% {
+        height: 0px;
     }
 }

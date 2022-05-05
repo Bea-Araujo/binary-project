@@ -74,11 +74,15 @@ class InputModel {
                             this._binToDec(inputText)
                             break
                         case 'octal':
+                            this.result = 'DESAFIO!'
                         // desafio
                     }
                 } catch (e) {
                     throw e
                 }
+                break
+            case 'octal':
+                this.result = 'DESAFIO!'
         }
 
     }
