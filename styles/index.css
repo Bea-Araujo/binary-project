@@ -1,4 +1,118 @@
+body {
+    background-image: url('../image/picture/o-THE-MATRIX-facebook.jpg.png');
+    background-size: cover;
+    overflow: hidden;
+}
+
+body::before {
+    background-color: green;
+    mix-blend-mode: color-dodge;
+    position: absolute;
+    content: '';
+    height: 50px;
+    width: 100%;
+    animation: scan 5s ease-in-out infinite;
+    z-index: -1;
+}
+
+
+
+.cabecalho {
+    background-color: black;
+    color: rgb(33, 211, 33);
+    padding: 10px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.cabecalho h1,
+.cabecalho h1::after {
+    filter: drop-shadow(0 0 5px green);
+}
+
+.cabecalho h1::after {
+    content: '_';
+    animation: blink 0.9s none infinite;
+}
+
+main {
+    color: white;
+    margin: auto;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(31, 31, 31);
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgb(80, 80, 80) rgb(121, 121, 121) rgb(121, 121, 121) rgb(80, 80, 80);
+    height: fit-content;
+    width: fit-content;
+}
+
+.from-to-section {
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    margin: 10px;
+}
+
+.from-to-section form {
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    margin: 0 10px 0 0;
+}
+
+.input-output-section {
+    display: flex;
+    width: 80vw;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+fieldset {
+    border-style: none;
+    display: flex;
+}
+
+textarea {
+    resize: none;
+}
+
 .input-area {
     transition: 1s;
     resize: none;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    49% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scan {
+    0% {
+        bottom: 100vh;
+    }
+
+    100% {
+        bottom: 0;
+    }
 }

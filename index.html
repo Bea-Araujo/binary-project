@@ -13,38 +13,54 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
 
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <title>Binary Code</title>
 </head>
 
 <body>
-    <header>
+    <header class="cabecalho">
         <h1>Binary Project</h1>
     </header>
     <main>
         <section class="from-to-section">
-            <label for="from-selection">De: </label>
-            <select name="from-selection" id="from-field">
-                <option value="decimal">Decimal</option>
-                <option value="binario">Binário</option>
-                <option value="octal">Octal</option>
-            </select>
+            <form>
+                <fieldset>
+                    <label for="from-selection">De: </label>
+                    <select name="from-selection" id="from-field">
+                        <option value="decimal">Decimal</option>
+                        <option value="binario">Binário</option>
+                        <option value="octal">Octal</option>
+                    </select>
+                </fieldset>
 
-            <label for="from-selection">Para: </label>
-            <select name="from-selection" id="to-field">
-                <option value="decimal">Decimal</option>
-                <option value="binario" selected>Binário</option>
-                <option value="octal">Octal</option>
-            </select>
+                <fieldset>
+                    <label for="from-selection">Para: </label>
+                    <select name="from-selection" id="to-field">
+                        <option value="decimal">Decimal</option>
+                        <option value="binario" selected>Binário</option>
+                        <option value="octal">Octal</option>
+                    </select>
+                </fieldset>
+            </form>
 
             <button id="submit-btn">Enviar</button>
         </section>
 
         <section class="input-output-section">
-            <label for="input-area">Código: </label>
-            <textarea name="input-area" id="input-area" class="input-area" cols="30" rows="10"></textarea>
+            <fieldset>
+                <label for="input-area">Código: </label>
+                <textarea name="input-area" id="input-area" class="input-area" cols="30" rows="10"></textarea>
+            </fieldset>
 
-            <label for="output-area">Tradução: </label>
-            <textarea name="output-area" id="output-area" cols="30" rows="10"></textarea>
+            <fieldset disabled>
+                <label for="output-area">Tradução: </label>
+                <textarea name="output-area" id="output-area" cols="30" rows="10"></textarea>
+            </fieldset>
+
         </section>
     </main>
     <footer></footer>
